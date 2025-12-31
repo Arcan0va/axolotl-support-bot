@@ -1,12 +1,8 @@
 {
-  "name": "axolotl-support-bot",
+  "name": "axolotl-support",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "worker.js",
   "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "discord.js": "^14.14.1",
-    "express": "^4.19.2"
+    "start": "node worker.js"
   }
 }
