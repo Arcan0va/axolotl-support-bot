@@ -1,3 +1,4 @@
 name = "axolotl-support"
 main = "worker.js"
 compatibility_date = "2025-12-31"
+type = "javascript"
