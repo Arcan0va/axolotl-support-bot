@@ -5,7 +5,7 @@ addEventListener("fetch", event => {
 async function handleRequest(request) {
   const body = await request.json().catch(() => ({}))
 
-  // Discord PING (vérifie que le bot est vivant)
+  // Discord PING
   if (body.type === 1) {
     return new Response(JSON.stringify({ type: 1 }), {
       headers: { "Content-Type": "application/json" }
@@ -15,7 +15,7 @@ async function handleRequest(request) {
   // Slash command
   if (body.type === 2) {
     return new Response(JSON.stringify({
-      type: 4, // Répondre avec un message
+      type: 4, // RESPONSE_CHANNEL_MESSAGE_WITH_SOURCE
       data: {
         content: "🦎 Support Axolotl — choisis une catégorie :",
         components: [
@@ -41,6 +41,5 @@ async function handleRequest(request) {
     }), { headers: { "Content-Type": "application/json" } })
   }
 
-  // Si c’est autre chose
   return new Response("Ok")
 }
